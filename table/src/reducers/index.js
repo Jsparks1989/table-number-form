@@ -1,11 +1,12 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
 
 
 
 const checkReducer = () => {
     return [
-        
+
     ];
 };
 
@@ -28,5 +29,5 @@ const tableNumReducer = (state=[], action) => {
 export default combineReducers({
     checkReducer: checkReducer,
     tableNumReducer: tableNumReducer,
-
+    form: formReducer
 });
