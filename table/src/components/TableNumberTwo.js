@@ -4,7 +4,7 @@ import { addNum } from '../actions/index';
 
 class TableNumberTwo extends React.Component {
     
-    
+
 
     render() {
         console.log(this.props);
@@ -14,7 +14,7 @@ class TableNumberTwo extends React.Component {
                     <label>Table Number</label>
                     <input type="text" name="first-name" placeholder="Please Enter Table#" value={this.props.tableNumReducer}/>
                 </div>
-                <button className="ui button" type="button">1</button>
+                <button className="ui button" type="button" onClick={() => this.props.addNum(1)}>1</button>
             </form>
         );
     }
@@ -22,7 +22,7 @@ class TableNumberTwo extends React.Component {
 
 const mapStateToProps = (state) => {
     return{
-        changeNumReducer: state.changeNumReducer,
+        // changeNumReducer: state.changeNumReducer,
         tableNumReducer: state.tableNumReducer
     };
 }
