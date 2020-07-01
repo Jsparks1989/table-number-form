@@ -1,12 +1,12 @@
 import React from 'react';
-import TableNumberOne from './TableNumberOne';
+import TableNumberTwo from './TableNumberTwo';
 
 
 class App extends React.Component {
     render() {
         return(
             <div className='ui container'>
-                <TableNumberOne />
+                <TableNumberTwo />
             </div>
         );
     }

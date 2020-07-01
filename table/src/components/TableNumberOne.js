@@ -16,9 +16,9 @@ class TableNumberOne extends React.Component {
         );
     }
 
-    renderButton = (formProps) => {
+    renderButton = () => {
         return(
-            <button onClick={this.props.addNum(1)} >1</button>
+            <button onClick={() => this.props.addNum(1)} >1</button>
         );
     }
 

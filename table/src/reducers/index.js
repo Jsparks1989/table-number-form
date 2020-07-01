@@ -4,7 +4,7 @@ import { reducer as formReducer } from 'redux-form';
 
 
 
-const checkReducer = () => {
+const tableNumReducer = () => {
     return [
 
     ];
@@ -13,7 +13,7 @@ const checkReducer = () => {
 
 
 
-const tableNumReducer = (state=[], action) => {
+const changeNumReducer = (state=[], action) => {
     switch(action.type) {
         case 'ADD_NUMBER':
             return [...state, action.payload ];
@@ -27,7 +27,7 @@ const tableNumReducer = (state=[], action) => {
 
 
 export default combineReducers({
-    checkReducer: checkReducer,
+    changeNumReducer: changeNumReducer,
     tableNumReducer: tableNumReducer,
     form: formReducer
 });
