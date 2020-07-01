@@ -7,11 +7,16 @@ export const addNum = (num) => {
     };
 };
 
-
-export const deleteNum = (num) => {
+export const bkspNum = () => {
     return {
-        type: 'DELETE_NUMBER',
-        payload: num
+        type: 'BKSP_NUMBER'
+    }
+}
+
+
+export const deleteNum = () => {
+    return {
+        type: 'DELETE_NUMBER'
     };
 };
 
