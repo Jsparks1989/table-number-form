@@ -21,9 +21,9 @@ export const deleteNum = () => {
 };
 
 
-export const sendNum = (num) => {
+export const submitNum = (num) => {
     return {
-        type: 'SEND_NUMBER',
+        type: 'SUBMIT_NUMBER',
         payload: num
     };
 };

@@ -8,7 +8,8 @@ const tableNumReducer = (state=[], action) => {
             return [...state, action.payload];
         case 'BKSP_NUMBER':
             //-- Use array.filter. Use array[array.length-1] to target the last array element.
-            return state.filter(());
+            //-- Taarget the array index of the last item. Which is what array[array.length-1] does.
+            // return state.filter(());
         case 'DELETE_NUMBER':
             return state=[];
         default:
@@ -66,10 +67,24 @@ const tableNumButtons = () => {
 
 
 
+const checkReducer = (state={}, action) => {
+    switch(action.type) {
+        case 'SUBMIT_NUMBER':
+            return {...state, checkNumber: action.payload};
+        default:
+            return state;
+    }
+} 
+
+
+
+
 
 export default combineReducers({
     //changeNumReducer: changeNumReducer,
     tableNumReducer: tableNumReducer,
     tableNumButtons: tableNumButtons,
-    form: formReducer
+    checkReducer: checkReducer
 });
+
+
